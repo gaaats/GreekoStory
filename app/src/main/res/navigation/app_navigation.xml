@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.reciperartgen.greekostory.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_famousPersonFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/famousPersonFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_aboutFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_mainSettingsFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/mainSettingsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_quizzFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/quizzFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_factsFragment"
+            app:destination="@id/factsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/intrestingFactsFragment"
+        android:name="com.reciperartgen.greekostory.IntrestingEventsFragment"
+        android:label="fragment_main_events"
+        tools:layout="@layout/fragment_interesting_facts" />
+    <fragment
+        android:id="@+id/famousPersonFragment"
+        android:name="com.reciperartgen.greekostory.FamousPersonFragment"
+        android:label="fragment_famous_person"
+        tools:layout="@layout/fragment_famous_person" />
+    <fragment
+        android:id="@+id/quizzFragment"
+        android:name="com.reciperartgen.greekostory.QuizzFragment"
+        android:label="fragment_quizz"
+        tools:layout="@layout/fragment_quizz" >
+        <action
+            android:id="@+id/action_quizzFragment_to_correctFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/correctFragment" />
+        <action
+            android:id="@+id/action_quizzFragment_to_failedFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/failedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.reciperartgen.greekostory.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_aboutAppFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/aboutAppFragment" />
+        <action
+            android:id="@+id/action_aboutFragment_to_galleryFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/galleryFragment" />
+        <action
+            android:id="@+id/action_aboutFragment_to_quizRullesFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/quizRullesFragment" />
+        <action
+            android:id="@+id/action_aboutFragment_to_facts_frag"
+            app:destination="@id/intrestingFactsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainSettingsFragment"
+        android:name="com.reciperartgen.greekostory.MainSettingsFragment"
+        android:label="fragment_main_settings"
+        tools:layout="@layout/fragment_main_settings" />
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.reciperartgen.greekostory.AboutAppFragment"
+        android:label="fragment_about_app"
+        tools:layout="@layout/fragment_about_app" />
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.reciperartgen.greekostory.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/quizRullesFragment"
+        android:name="com.reciperartgen.greekostory.QuizRullesFragment"
+        android:label="fragment_quiz_rulles"
+        tools:layout="@layout/fragment_quiz_rulles" />
+    <fragment
+        android:id="@+id/factsFragment"
+        android:name="com.reciperartgen.greekostory.FactsFragment"
+        android:label="fragment_facts"
+        tools:layout="@layout/fragment_facts" />
+    <fragment
+        android:id="@+id/correctFragment"
+        android:name="com.reciperartgen.greekostory.CorrectFragment"
+        android:label="fragment_correct"
+        tools:layout="@layout/fragment_correct" >
+        <action
+            android:id="@+id/action_correctFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_correctFragment_to_quizzFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:launchSingleTop="true"
+            app:destination="@id/quizzFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/failedFragment"
+        android:name="com.reciperartgen.greekostory.FailedFragment"
+        android:label="fragment_failed"
+        tools:layout="@layout/fragment_failed" >
+        <action
+            android:id="@+id/action_failedFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_failedFragment_to_quizzFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:launchSingleTop="true"
+            app:destination="@id/quizzFragment" />
+    </fragment>
+</navigation>
